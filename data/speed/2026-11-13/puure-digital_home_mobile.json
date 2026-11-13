@@ -1,0 +1,134 @@
+{
+ "checkedAt": "2026-11-13T14:26:56.290Z",
+ "lighthouse": "13.6.0",
+ "finalUrl": "https://puuredigital.co.uk/",
+ "speed": 88,
+ "accessibility": 89,
+ "best_practices": 100,
+ "seo": 100,
+ "fcp_s": 2.26,
+ "lcp_s": 3.17,
+ "si_s": 4.77,
+ "tbt_ms": 0,
+ "cls": 0,
+ "payload_kib": 90024,
+ "requests": 46,
+ "fix_first": "Render-blocking requests",
+ "fix_saving": "680 ms",
+ "opportunities": [
+  {
+   "id": "render-blocking-insight",
+   "title": "Render-blocking requests",
+   "saving": "680 ms"
+  },
+  {
+   "id": "image-delivery-insight",
+   "title": "Improve image delivery",
+   "saving": "1,967 KiB"
+  },
+  {
+   "id": "cache-insight",
+   "title": "Use efficient cache lifetimes",
+   "saving": "427 KiB"
+  },
+  {
+   "id": "unused-css-rules",
+   "title": "Reduce unused CSS",
+   "saving": "13 KiB"
+  },
+  {
+   "id": "unminified-css",
+   "title": "Minify CSS",
+   "saving": "5 KiB"
+  }
+ ],
+ "seo_issues": "",
+ "lcp_element": "<p class=\"hero-sub\">",
+ "failing": {
+  "performance": [
+   {
+    "id": "cache-insight",
+    "title": "Use efficient cache lifetimes",
+    "display": "Est savings of 427 KiB"
+   },
+   {
+    "id": "image-delivery-insight",
+    "title": "Improve image delivery",
+    "display": "Est savings of 1,967 KiB"
+   },
+   {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "display": ""
+   },
+   {
+    "id": "render-blocking-insight",
+    "title": "Render-blocking requests",
+    "display": "Est savings of 680 ms"
+   },
+   {
+    "id": "unminified-css",
+    "title": "Minify CSS",
+    "display": "Est savings of 5 KiB"
+   },
+   {
+    "id": "unused-css-rules",
+    "title": "Reduce unused CSS",
+    "display": "Est savings of 13 KiB"
+   },
+   {
+    "id": "total-byte-weight",
+    "title": "Avoid enormous network payloads",
+    "display": "Total size was 90,024 KiB"
+   },
+   {
+    "id": "mainthread-work-breakdown",
+    "title": "Minimize main-thread work",
+    "display": "3.3 s"
+   },
+   {
+    "id": "unsized-images",
+    "title": "Image elements do not have explicit `width` and `height`",
+    "display": ""
+   }
+  ],
+  "accessibility": [
+   {
+    "id": "aria-hidden-focus",
+    "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+    "display": ""
+   },
+   {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "display": ""
+   },
+   {
+    "id": "heading-order",
+    "title": "Heading elements are not in a sequentially-descending order",
+    "display": ""
+   },
+   {
+    "id": "landmark-one-main",
+    "title": "Document does not have a main landmark.",
+    "display": ""
+   }
+  ],
+  "best-practices": [],
+  "seo": []
+ },
+ "siteId": "puure-digital",
+ "site": "Puure Digital",
+ "page": "Home",
+ "pageKey": "home",
+ "url": "https://puuredigital.co.uk/",
+ "device": "mobile",
+ "request": null,
+ "status": "ok",
+ "runs": [
+  88,
+  88,
+  91
+ ],
+ "note": ""
+}

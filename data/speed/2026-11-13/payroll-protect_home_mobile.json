@@ -1,0 +1,109 @@
+{
+ "checkedAt": "2026-11-13T14:23:41.227Z",
+ "lighthouse": "13.6.0",
+ "finalUrl": "https://payrollprotect.co.uk/",
+ "speed": 89,
+ "accessibility": 97,
+ "best_practices": 100,
+ "seo": 100,
+ "fcp_s": 1.83,
+ "lcp_s": 3.38,
+ "si_s": 3.49,
+ "tbt_ms": 0,
+ "cls": 0,
+ "payload_kib": 398,
+ "requests": 48,
+ "fix_first": "Reduce unused CSS",
+ "fix_saving": "21 KiB",
+ "opportunities": [
+  {
+   "id": "unused-css-rules",
+   "title": "Reduce unused CSS",
+   "saving": "21 KiB"
+  },
+  {
+   "id": "unminified-css",
+   "title": "Minify CSS",
+   "saving": "15 KiB"
+  },
+  {
+   "id": "render-blocking-insight",
+   "title": "Render-blocking requests",
+   "saving": "130 ms"
+  },
+  {
+   "id": "unminified-javascript",
+   "title": "Minify JavaScript",
+   "saving": "2 KiB"
+  }
+ ],
+ "seo_issues": "",
+ "lcp_element": "<p class=\"hx-sub is-revealed\" data-reveal=\"\" style=\"--rv-delay: 450ms; --rv-dur: 450ms\">",
+ "failing": {
+  "performance": [
+   {
+    "id": "forced-reflow-insight",
+    "title": "Forced reflow",
+    "display": ""
+   },
+   {
+    "id": "lcp-breakdown-insight",
+    "title": "LCP breakdown",
+    "display": ""
+   },
+   {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "display": ""
+   },
+   {
+    "id": "render-blocking-insight",
+    "title": "Render-blocking requests",
+    "display": "Est savings of 130 ms"
+   },
+   {
+    "id": "unminified-css",
+    "title": "Minify CSS",
+    "display": "Est savings of 15 KiB"
+   },
+   {
+    "id": "unminified-javascript",
+    "title": "Minify JavaScript",
+    "display": "Est savings of 2 KiB"
+   },
+   {
+    "id": "unused-css-rules",
+    "title": "Reduce unused CSS",
+    "display": "Est savings of 21 KiB"
+   },
+   {
+    "id": "mainthread-work-breakdown",
+    "title": "Minimize main-thread work",
+    "display": "3.4 s"
+   }
+  ],
+  "accessibility": [
+   {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "display": ""
+   }
+  ],
+  "best-practices": [],
+  "seo": []
+ },
+ "siteId": "payroll-protect",
+ "site": "PayRoll Protect",
+ "page": "Home",
+ "pageKey": "home",
+ "url": "https://payrollprotect.co.uk/",
+ "device": "mobile",
+ "request": null,
+ "status": "ok",
+ "runs": [
+  89,
+  89,
+  89
+ ],
+ "note": ""
+}

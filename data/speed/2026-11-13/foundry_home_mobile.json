@@ -1,0 +1,130 @@
+{
+ "checkedAt": "2026-11-13T14:24:54.777Z",
+ "lighthouse": "13.6.0",
+ "finalUrl": "https://sienna-camel-377697.hostingersite.com/",
+ "speed": 70,
+ "accessibility": 97,
+ "best_practices": 100,
+ "seo": 69,
+ "fcp_s": 2.03,
+ "lcp_s": 20.43,
+ "si_s": 4.76,
+ "tbt_ms": 83,
+ "cls": 0.011,
+ "payload_kib": 10002,
+ "requests": 135,
+ "fix_first": "Render-blocking requests",
+ "fix_saving": "780 ms",
+ "opportunities": [
+  {
+   "id": "render-blocking-insight",
+   "title": "Render-blocking requests",
+   "saving": "780 ms"
+  },
+  {
+   "id": "image-delivery-insight",
+   "title": "Improve image delivery",
+   "saving": "12 KiB"
+  },
+  {
+   "id": "unused-css-rules",
+   "title": "Reduce unused CSS",
+   "saving": "11 KiB"
+  },
+  {
+   "id": "unminified-javascript",
+   "title": "Minify JavaScript",
+   "saving": "7 KiB"
+  },
+  {
+   "id": "unminified-css",
+   "title": "Minify CSS",
+   "saving": "4 KiB"
+  }
+ ],
+ "seo_issues": "Page is blocked from indexing",
+ "lcp_element": "<p class=\"eyebrow hero__eyebrow is-on\" data-hero-step=\"0\">",
+ "failing": {
+  "performance": [
+   {
+    "id": "forced-reflow-insight",
+    "title": "Forced reflow",
+    "display": ""
+   },
+   {
+    "id": "image-delivery-insight",
+    "title": "Improve image delivery",
+    "display": "Est savings of 12 KiB"
+   },
+   {
+    "id": "lcp-breakdown-insight",
+    "title": "LCP breakdown",
+    "display": ""
+   },
+   {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "display": ""
+   },
+   {
+    "id": "render-blocking-insight",
+    "title": "Render-blocking requests",
+    "display": "Est savings of 780 ms"
+   },
+   {
+    "id": "unminified-css",
+    "title": "Minify CSS",
+    "display": "Est savings of 4 KiB"
+   },
+   {
+    "id": "unminified-javascript",
+    "title": "Minify JavaScript",
+    "display": "Est savings of 7 KiB"
+   },
+   {
+    "id": "unused-css-rules",
+    "title": "Reduce unused CSS",
+    "display": "Est savings of 11 KiB"
+   },
+   {
+    "id": "total-byte-weight",
+    "title": "Avoid enormous network payloads",
+    "display": "Total size was 10,002 KiB"
+   },
+   {
+    "id": "mainthread-work-breakdown",
+    "title": "Minimize main-thread work",
+    "display": "4.0 s"
+   }
+  ],
+  "accessibility": [
+   {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "display": ""
+   }
+  ],
+  "best-practices": [],
+  "seo": [
+   {
+    "id": "is-crawlable",
+    "title": "Page is blocked from indexing",
+    "display": ""
+   }
+  ]
+ },
+ "siteId": "foundry",
+ "site": "Foundry",
+ "page": "Home (staging)",
+ "pageKey": "home",
+ "url": "https://sienna-camel-377697.hostingersite.com/",
+ "device": "mobile",
+ "request": null,
+ "status": "ok",
+ "runs": [
+  64,
+  70,
+  94
+ ],
+ "note": ""
+}
