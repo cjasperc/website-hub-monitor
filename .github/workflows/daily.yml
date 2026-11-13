@@ -33,6 +33,12 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '22'
+      - name: Note which request started this run
+        run: node scripts/find-request.mjs
+        env:
+          EVENT: ${{ github.event_name }}
+      - name: Catch up with the newest results
+        run: git fetch -q origin main && git reset -q --hard origin/main
       - name: Install Lighthouse
         run: npm install --no-save --no-audit --no-fund lighthouse@13.6.0
       - name: Certificates, headers and redirects

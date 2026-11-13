@@ -29,9 +29,17 @@ export const today = (d = new Date()) => d.toISOString().slice(0, 10);
 
 export const RUN_ID = /^[\w-]{1,80}$/;
 
-// The request this run is answering: the file under requests/ that the triggering push added.
+// The request this run is answering, as find-request.mjs noted it at the start of the run.
 // Scheduled and manual runs have none, so this returns null for them.
 export function currentRequest() {
+  const saved = readJson('.request.json', null);
+  if (saved) return typeof saved.runId === 'string' && RUN_ID.test(saved.runId) ? saved : null;
+  return requestFromPush();
+}
+
+// The file under requests/ that the triggering push added. Only true before the run moves to a
+// newer commit, which is why find-request.mjs saves it first.
+export function requestFromPush() {
   if (process.env.EVENT !== 'push') return null;
   try {
     const added = execFileSync('git', ['diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD', '--', 'requests/'], { encoding: 'utf8' })
