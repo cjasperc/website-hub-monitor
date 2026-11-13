@@ -1,0 +1,31 @@
+name: Uptime
+
+# Every 5 minutes (GitHub may start a scheduled run a few minutes late when it's busy).
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Check every site
+        run: node scripts/uptime.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Save results
+        run: bash scripts/save.sh "Uptime"

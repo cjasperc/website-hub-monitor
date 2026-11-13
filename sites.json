@@ -1,0 +1,9 @@
+{
+  "notify": ["cjasperc"],
+  "devices": ["mobile", "desktop"],
+  "sites": [
+    { "id": "payroll-protect", "name": "PayRoll Protect", "url": "https://payrollprotect.co.uk/", "page": "Home", "pages": [], "active": true },
+    { "id": "foundry", "name": "Foundry", "url": "https://sienna-camel-377697.hostingersite.com/", "page": "Home (staging)", "pages": [], "active": true },
+    { "id": "puure-digital", "name": "Puure Digital", "url": "https://puuredigital.co.uk/", "page": "Home", "pages": [], "active": true }
+  ]
+}

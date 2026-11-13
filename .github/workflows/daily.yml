@@ -1,0 +1,48 @@
+name: Speed and health
+
+# Daily at 05:05 UTC, when the hub asks for a check (it pushes a file to requests/),
+# or by hand from the Actions tab.
+on:
+  schedule:
+    - cron: '5 5 * * *'
+  push:
+    branches: [main]
+    paths: ['requests/**']
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: 'Site ids, comma separated. Leave blank for every site.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: speed
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Install Lighthouse
+        run: npm install --no-save --no-audit --no-fund lighthouse@13.6.0
+      - name: Certificates, headers and redirects
+        run: node scripts/health.mjs
+      - name: Lighthouse, three runs per page and device
+        run: node scripts/speed.mjs
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+          EVENT: ${{ github.event_name }}
+          INPUT_SITES: ${{ inputs.sites }}
+      - name: Save results
+        if: always()
+        run: bash scripts/save.sh "Speed and health"
