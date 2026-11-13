@@ -14,6 +14,16 @@ function findSnippet(o, depth = 0) {
   return '';
 }
 
+// The file name at the end of a URL, without its query, so reports show "hero.mp4", not a long link.
+function fileName(url) {
+  try {
+    const u = new URL(url);
+    return decodeURIComponent(u.pathname.split('/').filter(Boolean).pop() || u.host).slice(0, 80);
+  } catch {
+    return String(url || '').slice(0, 80);
+  }
+}
+
 // Audits that count against a category, as PageSpeed lists them.
 function failingAudits(lhr, category) {
   return (lhr.categories[category]?.auditRefs || [])
@@ -66,6 +76,7 @@ export function summarize(lhr) {
     opportunities: opportunities.slice(0, 6).map(({ id, title, saving: s }) => ({ id, title, saving: s })),
     seo_issues: failing.seo.map((x) => x.title).join('; '),
     lcp_element: findSnippet(a['lcp-breakdown-insight']?.details).slice(0, 200),
+    heaviest: (a['total-byte-weight']?.details?.items || []).slice(0, 6).map((it) => ({ file: fileName(it.url), kib: Math.round((it.totalBytes || 0) / 1024) })),
     failing,
   };
 }

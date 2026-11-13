@@ -27,6 +27,32 @@ export function loadConfig(file = process.env.SITES_FILE || 'sites.json') {
 
 export const today = (d = new Date()) => d.toISOString().slice(0, 10);
 
+export const RUN_ID = /^[\w-]{1,80}$/;
+
+// The request this run is answering: the file under requests/ that the triggering push added.
+// Scheduled and manual runs have none, so this returns null for them.
+export function currentRequest() {
+  if (process.env.EVENT !== 'push') return null;
+  try {
+    const added = execFileSync('git', ['diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD', '--', 'requests/'], { encoding: 'utf8' })
+      .split('\n').filter((f) => f.endsWith('.json'));
+    if (!added.length) return null;
+    const req = readJson(added[added.length - 1], null);
+    if (!req || typeof req.runId !== 'string' || !RUN_ID.test(req.runId)) return null;
+    return { ...req, file: added[added.length - 1] };
+  } catch (e) {
+    console.warn('request:', e.message);
+    return null;
+  }
+}
+
+// Updates data/requests/<runId>.json, which the Claude task watches to know when the run is done.
+export function markRequest(req, fields) {
+  if (!req) return;
+  const file = `data/requests/${req.runId}.json`;
+  writeJson(file, { ...readJson(file, { runId: req.runId, kind: req.kind || 'check' }), ...fields, updatedAt: new Date().toISOString() });
+}
+
 // The gh CLI is preinstalled on GitHub's runners and reads GH_TOKEN from the workflow.
 // It only runs there (GITHUB_REPOSITORY is set by Actions), and always names the repo.
 export const gh = {

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { readJson, writeJson, loadConfig, today } from './lib.mjs';
+import { writeJson, loadConfig, today, currentRequest, markRequest } from './lib.mjs';
 import { summarize } from './summarize.mjs';
 
 const RUNS = Math.max(1, Number(process.env.RUNS || 3));
@@ -12,25 +12,12 @@ const cfg = loadConfig();
 const now = new Date();
 const date = today(now);
 
-// What to check: the request file this push added, the manual input, or every site.
-function request() {
-  if (process.env.EVENT === 'push') {
-    try {
-      const added = execFileSync('git', ['diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD', '--', 'requests/'], { encoding: 'utf8' })
-        .split('\n').filter(Boolean);
-      if (added.length) return { file: added[added.length - 1], ...readJson(added[added.length - 1], {}) };
-    } catch (e) {
-      console.warn('request:', e.message);
-    }
-  }
-  if (process.env.INPUT_SITES) return { siteIds: process.env.INPUT_SITES.split(',').map((s) => s.trim()).filter(Boolean) };
-  return {};
-}
-
-const req = request();
-const runId = typeof req.runId === 'string' && /^[\w-]{1,80}$/.test(req.runId) ? req.runId : null;
-const wanted = Array.isArray(req.siteIds) && req.siteIds.length ? req.siteIds : null;
-const devices = (Array.isArray(req.devices) && req.devices.length ? req.devices : cfg.devices || ['mobile', 'desktop'])
+// What to check: the request the triggering push added, the manual input, or every site.
+const req = currentRequest();
+const manual = !req && process.env.INPUT_SITES ? process.env.INPUT_SITES.split(',').map((s) => s.trim()).filter(Boolean) : null;
+const runId = req ? req.runId : null;
+const wanted = req && Array.isArray(req.siteIds) && req.siteIds.length ? req.siteIds : manual;
+const devices = (req && Array.isArray(req.devices) && req.devices.length ? req.devices : cfg.devices || ['mobile', 'desktop'])
   .filter((d) => d === 'mobile' || d === 'desktop');
 const sites = cfg.sites.filter((s) => !wanted || wanted.includes(s.id));
 const lighthouse = path.resolve(process.env.LIGHTHOUSE_BIN || 'node_modules/.bin/lighthouse');
@@ -55,7 +42,7 @@ function runOnce(url, device, i) {
   return lhr;
 }
 
-if (runId) writeJson(`data/requests/${runId}.json`, { runId, status: 'running', startedAt: now.toISOString(), siteIds: sites.map((s) => s.id), devices });
+markRequest(req, { status: 'running', startedAt: now.toISOString(), siteIds: sites.map((s) => s.id), devices, step: 'Lighthouse is testing the pages' });
 
 const written = [];
 for (const site of sites) {
@@ -84,10 +71,10 @@ for (const site of sites) {
       writeJson(file, doc);
       written.push(file);
       console.log(`${site.id} ${key} ${device}: ${doc.status}, speed ${doc.speed ?? '-'}, SEO ${doc.seo ?? '-'}, runs ${doc.runs ? doc.runs.join('/') : '-'}`);
+      markRequest(req, { step: `${site.name} ${page.label} ${device}: ${doc.status === 'ok' ? `speed ${doc.speed}, SEO ${doc.seo}` : 'failed'}`, files: written });
     }
   }
 }
 
-const finishedAt = new Date().toISOString();
-writeJson('data/speed/latest.json', { date, startedAt: now.toISOString(), finishedAt, request: runId, files: written });
-if (runId) writeJson(`data/requests/${runId}.json`, { runId, status: 'done', startedAt: now.toISOString(), finishedAt, files: written });
+writeJson('data/speed/latest.json', { date, startedAt: now.toISOString(), finishedAt: new Date().toISOString(), request: runId, files: written });
+// The workflow's last step marks the request done or failed, after any screenshots.
