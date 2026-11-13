@@ -1,30 +1,25 @@
 {
- "checkedAt": "2026-11-13T14:43:45.286Z",
+ "checkedAt": "2026-11-13T14:57:33.946Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://sienna-camel-377697.hostingersite.com/",
- "speed": 71,
+ "speed": 93,
  "accessibility": 97,
  "best_practices": 100,
  "seo": 69,
- "fcp_s": 1.95,
- "lcp_s": 19.05,
- "si_s": 4.33,
- "tbt_ms": 17,
- "cls": 0.024,
- "payload_kib": 10003,
+ "fcp_s": 1.75,
+ "lcp_s": 3.11,
+ "si_s": 1.85,
+ "tbt_ms": 53,
+ "cls": 0.025,
+ "payload_kib": 9999,
  "requests": 135,
  "fix_first": "Render-blocking requests",
- "fix_saving": "810 ms",
+ "fix_saving": "740 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "810 ms"
-  },
-  {
-   "id": "image-delivery-insight",
-   "title": "Improve image delivery",
-   "saving": "12 KiB"
+   "saving": "740 ms"
   },
   {
    "id": "unused-css-rules",
@@ -43,7 +38,7 @@
   }
  ],
  "seo_issues": "Page is blocked from indexing",
- "lcp_element": "<p class=\"eyebrow hero__eyebrow is-on\" data-hero-step=\"0\">",
+ "lcp_element": "<image class=\"loader__cast\" href=\"/assets/logo/foundry-mark-512.webp\" x=\"62.99\" y=\"75.77\" width=\"114.02\" height=\"92.45\" preserveAspectRatio=\"none\">",
  "heaviest": [
   {
    "file": "frame_0116.webp",
@@ -62,24 +57,24 @@
    "kib": 103
   },
   {
-   "file": "frame_0108.webp",
+   "file": "frame_0111.webp",
    "kib": 103
   },
   {
-   "file": "frame_0114.webp",
+   "file": "frame_0108.webp",
    "kib": 103
   }
  ],
  "failing": {
   "performance": [
    {
-    "id": "image-delivery-insight",
-    "title": "Improve image delivery",
-    "display": "Est savings of 12 KiB"
+    "id": "forced-reflow-insight",
+    "title": "Forced reflow",
+    "display": ""
    },
    {
-    "id": "lcp-breakdown-insight",
-    "title": "LCP breakdown",
+    "id": "lcp-discovery-insight",
+    "title": "LCP request discovery",
     "display": ""
    },
    {
@@ -90,7 +85,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 810 ms"
+    "display": "Est savings of 740 ms"
    },
    {
     "id": "unminified-css",
@@ -110,12 +105,12 @@
    {
     "id": "total-byte-weight",
     "title": "Avoid enormous network payloads",
-    "display": "Total size was 10,003 KiB"
+    "display": "Total size was 9,999 KiB"
    },
    {
     "id": "mainthread-work-breakdown",
     "title": "Minimize main-thread work",
-    "display": "4.6 s"
+    "display": "3.6 s"
    }
   ],
   "accessibility": [
@@ -140,12 +135,12 @@
  "pageKey": "home",
  "url": "https://sienna-camel-377697.hostingersite.com/",
  "device": "mobile",
- "request": null,
+ "request": "re2e1113b",
  "status": "ok",
  "runs": [
-  71,
-  71,
-  97
+  72,
+  93,
+  93
  ],
  "note": ""
 }

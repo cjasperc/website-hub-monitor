@@ -1,0 +1,26 @@
+{
+ "runId": "re2e1113b",
+ "kind": "check",
+ "status": "done",
+ "startedAt": "2026-11-13T14:55:55.865Z",
+ "siteIds": [
+  "payroll-protect",
+  "foundry",
+  "puure-digital"
+ ],
+ "devices": [
+  "mobile",
+  "desktop"
+ ],
+ "step": "Finished",
+ "updatedAt": "2026-11-13T15:00:46.654Z",
+ "files": [
+  "data/speed/2026-11-13/payroll-protect_home_mobile.json",
+  "data/speed/2026-11-13/payroll-protect_home_desktop.json",
+  "data/speed/2026-11-13/foundry_home_mobile.json",
+  "data/speed/2026-11-13/foundry_home_desktop.json",
+  "data/speed/2026-11-13/puure-digital_home_mobile.json",
+  "data/speed/2026-11-13/puure-digital_home_desktop.json"
+ ],
+ "finishedAt": "2026-11-13T15:00:46.654Z"
+}

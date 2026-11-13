@@ -1,25 +1,25 @@
 {
- "checkedAt": "2026-11-13T14:45:38.918Z",
+ "checkedAt": "2026-11-13T14:59:20.166Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://puuredigital.co.uk/",
- "speed": 91,
+ "speed": 92,
  "accessibility": 89,
  "best_practices": 100,
  "seo": 100,
- "fcp_s": 2.55,
- "lcp_s": 2.55,
- "si_s": 4.48,
+ "fcp_s": 2.27,
+ "lcp_s": 2.27,
+ "si_s": 5.39,
  "tbt_ms": 0,
  "cls": 0,
- "payload_kib": 81922,
+ "payload_kib": 86907,
  "requests": 46,
  "fix_first": "Render-blocking requests",
- "fix_saving": "670 ms",
+ "fix_saving": "740 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "670 ms"
+   "saving": "740 ms"
   },
   {
    "id": "image-delivery-insight",
@@ -47,27 +47,27 @@
  "heaviest": [
   {
    "file": "ad-tuffstuff.mp4",
-   "kib": 21370
+   "kib": 21789
   },
   {
    "file": "ad-diamond-winners.mp4",
-   "kib": 17133
-  },
-  {
-   "file": "ad-tom.mp4",
-   "kib": 9213
+   "kib": 16756
   },
   {
    "file": "hero video 1 v2 compressed.mp4",
-   "kib": 7552
+   "kib": 12490
+  },
+  {
+   "file": "ad-tom.mp4",
+   "kib": 9195
   },
   {
    "file": "ad-btf.mp4",
-   "kib": 7274
+   "kib": 7303
   },
   {
    "file": "ad-smp.mp4",
-   "kib": 7000
+   "kib": 6848
   }
  ],
  "failing": {
@@ -90,7 +90,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 670 ms"
+    "display": "Est savings of 740 ms"
    },
    {
     "id": "unminified-css",
@@ -105,12 +105,12 @@
    {
     "id": "total-byte-weight",
     "title": "Avoid enormous network payloads",
-    "display": "Total size was 81,922 KiB"
+    "display": "Total size was 86,907 KiB"
    },
    {
     "id": "mainthread-work-breakdown",
     "title": "Minimize main-thread work",
-    "display": "3.1 s"
+    "display": "4.1 s"
    },
    {
     "id": "unsized-images",
@@ -149,12 +149,12 @@
  "pageKey": "home",
  "url": "https://puuredigital.co.uk/",
  "device": "mobile",
- "request": null,
+ "request": "re2e1113b",
  "status": "ok",
  "runs": [
   90,
-  91,
-  92
+  92,
+  93
  ],
  "note": ""
 }

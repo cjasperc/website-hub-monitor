@@ -1,16 +1,16 @@
 {
- "checkedAt": "2026-11-13T14:43:04.264Z",
+ "checkedAt": "2026-11-13T14:57:04.256Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://payrollprotect.co.uk/",
  "speed": 97,
  "accessibility": 97,
  "best_practices": 100,
  "seo": 100,
- "fcp_s": 0.76,
- "lcp_s": 0.76,
- "si_s": 1.57,
+ "fcp_s": 0.8,
+ "lcp_s": 0.8,
+ "si_s": 1.62,
  "tbt_ms": 0,
- "cls": 0.003,
+ "cls": 0.012,
  "payload_kib": 924,
  "requests": 49,
  "fix_first": "Improve image delivery",
@@ -38,7 +38,7 @@
   }
  ],
  "seo_issues": "",
- "lcp_element": "",
+ "lcp_element": "<span class=\"pl__n\">",
  "heaviest": [
   {
    "file": "hero-720.mp4",
@@ -119,7 +119,7 @@
  "pageKey": "home",
  "url": "https://payrollprotect.co.uk/",
  "device": "desktop",
- "request": null,
+ "request": "re2e1113b",
  "status": "ok",
  "runs": [
   97,
