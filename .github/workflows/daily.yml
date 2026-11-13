@@ -1,7 +1,7 @@
 name: Speed and health
 
-# Daily at 05:05 UTC, when the hub asks for a check or a review (its Claude task pushes a file
-# to requests/), or by hand from the Actions tab.
+# When the hub asks for a check or a review (its Claude tasks push a file to requests/; the daily
+# import asks every morning), daily at 05:05 UTC when GitHub's timer fires, or by hand.
 on:
   schedule:
     - cron: '5 5 * * *'
@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: speed
@@ -54,6 +55,10 @@ jobs:
         env:
           CHROME_PATH: /usr/bin/google-chrome
           EVENT: ${{ github.event_name }}
+      - name: Uptime check too, in case GitHub's 5 minute timer skips
+        run: node scripts/uptime.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Mark the request done or failed
         if: always()
         run: node scripts/finish.mjs "${{ job.status }}"
