@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-13T14:57:33.946Z",
+ "checkedAt": "2026-11-13T16:43:37.271Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://sienna-camel-377697.hostingersite.com/",
  "speed": 93,
@@ -8,18 +8,18 @@
  "seo": 69,
  "fcp_s": 1.75,
  "lcp_s": 3.11,
- "si_s": 1.85,
- "tbt_ms": 53,
- "cls": 0.025,
+ "si_s": 1.75,
+ "tbt_ms": 35,
+ "cls": 0.024,
  "payload_kib": 9999,
  "requests": 135,
  "fix_first": "Render-blocking requests",
- "fix_saving": "740 ms",
+ "fix_saving": "750 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "740 ms"
+   "saving": "750 ms"
   },
   {
    "id": "unused-css-rules",
@@ -41,37 +41,33 @@
  "lcp_element": "<image class=\"loader__cast\" href=\"/assets/logo/foundry-mark-512.webp\" x=\"62.99\" y=\"75.77\" width=\"114.02\" height=\"92.45\" preserveAspectRatio=\"none\">",
  "heaviest": [
   {
-   "file": "frame_0116.webp",
-   "kib": 103
+   "file": "frame_*.webp",
+   "count": 124,
+   "kib": 9743
   },
   {
-   "file": "frame_0109.webp",
-   "kib": 103
+   "file": "k3kQo8UDI-1M0wlSfdnoLmvDIaI.woff2",
+   "count": 1,
+   "kib": 88
   },
   {
-   "file": "frame_0117.webp",
-   "kib": 103
+   "file": "hero-still-960.webp",
+   "count": 1,
+   "kib": 36
   },
   {
-   "file": "frame_0119.webp",
-   "kib": 103
+   "file": "foundry-mark-*.webp",
+   "count": 2,
+   "kib": 36
   },
   {
-   "file": "frame_0111.webp",
-   "kib": 103
-  },
-  {
-   "file": "frame_0108.webp",
-   "kib": 103
+   "file": "fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDuDJAM2w.woff2",
+   "count": 1,
+   "kib": 35
   }
  ],
  "failing": {
   "performance": [
-   {
-    "id": "forced-reflow-insight",
-    "title": "Forced reflow",
-    "display": ""
-   },
    {
     "id": "lcp-discovery-insight",
     "title": "LCP request discovery",
@@ -85,7 +81,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 740 ms"
+    "display": "Est savings of 750 ms"
    },
    {
     "id": "unminified-css",
@@ -110,7 +106,7 @@
    {
     "id": "mainthread-work-breakdown",
     "title": "Minimize main-thread work",
-    "display": "3.6 s"
+    "display": "3.7 s"
    }
   ],
   "accessibility": [
@@ -135,10 +131,10 @@
  "pageKey": "home",
  "url": "https://sienna-camel-377697.hostingersite.com/",
  "device": "mobile",
- "request": "re2e1113b",
+ "request": null,
  "status": "ok",
  "runs": [
-  72,
+  79,
   93,
   93
  ],

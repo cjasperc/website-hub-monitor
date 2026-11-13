@@ -1,25 +1,25 @@
 {
- "checkedAt": "2026-11-13T15:00:32.794Z",
+ "checkedAt": "2026-11-13T16:46:06.123Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://puuredigital.co.uk/",
- "speed": 92,
+ "speed": 90,
  "accessibility": 94,
  "best_practices": 100,
  "seo": 100,
- "fcp_s": 1.13,
- "lcp_s": 1.13,
- "si_s": 1.96,
+ "fcp_s": 1.24,
+ "lcp_s": 1.24,
+ "si_s": 2.2,
  "tbt_ms": 0,
  "cls": 0.001,
- "payload_kib": 83339,
+ "payload_kib": 91101,
  "requests": 46,
  "fix_first": "Render-blocking requests",
- "fix_saving": "180 ms",
+ "fix_saving": "190 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "180 ms"
+   "saving": "190 ms"
   },
   {
    "id": "image-delivery-insight",
@@ -47,27 +47,28 @@
  "heaviest": [
   {
    "file": "ad-tuffstuff.mp4",
-   "kib": 21600
+   "count": 1,
+   "kib": 21552
   },
   {
    "file": "ad-diamond-winners.mp4",
-   "kib": 17476
-  },
-  {
-   "file": "ad-tom.mp4",
-   "kib": 9161
-  },
-  {
-   "file": "ad-btf.mp4",
-   "kib": 7922
+   "count": 3,
+   "kib": 17546
   },
   {
    "file": "hero video 1 v2 compressed.mp4",
-   "kib": 7536
+   "count": 1,
+   "kib": 15380
   },
   {
-   "file": "ad-smp.mp4",
-   "kib": 6851
+   "file": "ad-tom.mp4",
+   "count": 3,
+   "kib": 9516
+  },
+  {
+   "file": "ad-btf.mp4",
+   "count": 3,
+   "kib": 7506
   }
  ],
  "failing": {
@@ -90,7 +91,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 180 ms"
+    "display": "Est savings of 190 ms"
    },
    {
     "id": "unminified-css",
@@ -105,7 +106,7 @@
    {
     "id": "total-byte-weight",
     "title": "Avoid enormous network payloads",
-    "display": "Total size was 83,339 KiB"
+    "display": "Total size was 91,101 KiB"
    },
    {
     "id": "unsized-images",
@@ -134,12 +135,12 @@
  "pageKey": "home",
  "url": "https://puuredigital.co.uk/",
  "device": "desktop",
- "request": "re2e1113b",
+ "request": null,
  "status": "ok",
  "runs": [
+  89,
   90,
-  92,
-  95
+  92
  ],
  "note": ""
 }
