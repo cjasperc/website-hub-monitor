@@ -1,25 +1,25 @@
 {
- "checkedAt": "2026-11-13T14:26:56.290Z",
+ "checkedAt": "2026-11-13T14:45:38.918Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://puuredigital.co.uk/",
- "speed": 88,
+ "speed": 91,
  "accessibility": 89,
  "best_practices": 100,
  "seo": 100,
- "fcp_s": 2.26,
- "lcp_s": 3.17,
- "si_s": 4.77,
+ "fcp_s": 2.55,
+ "lcp_s": 2.55,
+ "si_s": 4.48,
  "tbt_ms": 0,
  "cls": 0,
- "payload_kib": 90024,
+ "payload_kib": 81922,
  "requests": 46,
  "fix_first": "Render-blocking requests",
- "fix_saving": "680 ms",
+ "fix_saving": "670 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "680 ms"
+   "saving": "670 ms"
   },
   {
    "id": "image-delivery-insight",
@@ -44,6 +44,32 @@
  ],
  "seo_issues": "",
  "lcp_element": "<p class=\"hero-sub\">",
+ "heaviest": [
+  {
+   "file": "ad-tuffstuff.mp4",
+   "kib": 21370
+  },
+  {
+   "file": "ad-diamond-winners.mp4",
+   "kib": 17133
+  },
+  {
+   "file": "ad-tom.mp4",
+   "kib": 9213
+  },
+  {
+   "file": "hero video 1 v2 compressed.mp4",
+   "kib": 7552
+  },
+  {
+   "file": "ad-btf.mp4",
+   "kib": 7274
+  },
+  {
+   "file": "ad-smp.mp4",
+   "kib": 7000
+  }
+ ],
  "failing": {
   "performance": [
    {
@@ -64,7 +90,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 680 ms"
+    "display": "Est savings of 670 ms"
    },
    {
     "id": "unminified-css",
@@ -79,12 +105,12 @@
    {
     "id": "total-byte-weight",
     "title": "Avoid enormous network payloads",
-    "display": "Total size was 90,024 KiB"
+    "display": "Total size was 81,922 KiB"
    },
    {
     "id": "mainthread-work-breakdown",
     "title": "Minimize main-thread work",
-    "display": "3.3 s"
+    "display": "3.1 s"
    },
    {
     "id": "unsized-images",
@@ -126,9 +152,9 @@
  "request": null,
  "status": "ok",
  "runs": [
-  88,
-  88,
-  91
+  90,
+  91,
+  92
  ],
  "note": ""
 }

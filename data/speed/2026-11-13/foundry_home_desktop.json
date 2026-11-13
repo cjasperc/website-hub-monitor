@@ -1,25 +1,25 @@
 {
- "checkedAt": "2026-11-13T14:26:03.914Z",
+ "checkedAt": "2026-11-13T14:44:33.322Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://sienna-camel-377697.hostingersite.com/",
- "speed": 95,
+ "speed": 96,
  "accessibility": 97,
  "best_practices": 100,
  "seo": 69,
- "fcp_s": 0.79,
- "lcp_s": 0.79,
- "si_s": 1.89,
+ "fcp_s": 0.75,
+ "lcp_s": 0.75,
+ "si_s": 1.71,
  "tbt_ms": 0,
- "cls": 0.057,
- "payload_kib": 8468,
+ "cls": 0.054,
+ "payload_kib": 8472,
  "requests": 135,
  "fix_first": "Render-blocking requests",
- "fix_saving": "230 ms",
+ "fix_saving": "260 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "230 ms"
+   "saving": "260 ms"
   },
   {
    "id": "unused-css-rules",
@@ -39,13 +39,34 @@
  ],
  "seo_issues": "Page is blocked from indexing",
  "lcp_element": "<p class=\"loader__count\">",
+ "heaviest": [
+  {
+   "file": "k3kQo8UDI-1M0wlSfdnoLmvDIaI.woff2",
+   "kib": 88
+  },
+  {
+   "file": "frame_0123.jpg",
+   "kib": 86
+  },
+  {
+   "file": "frame_0110.jpg",
+   "kib": 86
+  },
+  {
+   "file": "frame_0120.jpg",
+   "kib": 86
+  },
+  {
+   "file": "frame_0122.jpg",
+   "kib": 86
+  },
+  {
+   "file": "frame_0115.jpg",
+   "kib": 86
+  }
+ ],
  "failing": {
   "performance": [
-   {
-    "id": "forced-reflow-insight",
-    "title": "Forced reflow",
-    "display": ""
-   },
    {
     "id": "network-dependency-tree-insight",
     "title": "Network dependency tree",
@@ -54,7 +75,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 230 ms"
+    "display": "Est savings of 260 ms"
    },
    {
     "id": "unminified-css",
@@ -74,7 +95,7 @@
    {
     "id": "total-byte-weight",
     "title": "Avoid enormous network payloads",
-    "display": "Total size was 8,468 KiB"
+    "display": "Total size was 8,472 KiB"
    }
   ],
   "accessibility": [
@@ -102,9 +123,9 @@
  "request": null,
  "status": "ok",
  "runs": [
-  94,
   95,
-  95
+  96,
+  99
  ],
  "note": ""
 }

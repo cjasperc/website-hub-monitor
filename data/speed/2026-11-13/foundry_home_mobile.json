@@ -1,25 +1,25 @@
 {
- "checkedAt": "2026-11-13T14:24:54.777Z",
+ "checkedAt": "2026-11-13T14:43:45.286Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://sienna-camel-377697.hostingersite.com/",
- "speed": 70,
+ "speed": 71,
  "accessibility": 97,
  "best_practices": 100,
  "seo": 69,
- "fcp_s": 2.03,
- "lcp_s": 20.43,
- "si_s": 4.76,
- "tbt_ms": 83,
- "cls": 0.011,
- "payload_kib": 10002,
+ "fcp_s": 1.95,
+ "lcp_s": 19.05,
+ "si_s": 4.33,
+ "tbt_ms": 17,
+ "cls": 0.024,
+ "payload_kib": 10003,
  "requests": 135,
  "fix_first": "Render-blocking requests",
- "fix_saving": "780 ms",
+ "fix_saving": "810 ms",
  "opportunities": [
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "780 ms"
+   "saving": "810 ms"
   },
   {
    "id": "image-delivery-insight",
@@ -44,13 +44,34 @@
  ],
  "seo_issues": "Page is blocked from indexing",
  "lcp_element": "<p class=\"eyebrow hero__eyebrow is-on\" data-hero-step=\"0\">",
+ "heaviest": [
+  {
+   "file": "frame_0116.webp",
+   "kib": 103
+  },
+  {
+   "file": "frame_0109.webp",
+   "kib": 103
+  },
+  {
+   "file": "frame_0117.webp",
+   "kib": 103
+  },
+  {
+   "file": "frame_0119.webp",
+   "kib": 103
+  },
+  {
+   "file": "frame_0108.webp",
+   "kib": 103
+  },
+  {
+   "file": "frame_0114.webp",
+   "kib": 103
+  }
+ ],
  "failing": {
   "performance": [
-   {
-    "id": "forced-reflow-insight",
-    "title": "Forced reflow",
-    "display": ""
-   },
    {
     "id": "image-delivery-insight",
     "title": "Improve image delivery",
@@ -69,7 +90,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 780 ms"
+    "display": "Est savings of 810 ms"
    },
    {
     "id": "unminified-css",
@@ -89,12 +110,12 @@
    {
     "id": "total-byte-weight",
     "title": "Avoid enormous network payloads",
-    "display": "Total size was 10,002 KiB"
+    "display": "Total size was 10,003 KiB"
    },
    {
     "id": "mainthread-work-breakdown",
     "title": "Minimize main-thread work",
-    "display": "4.0 s"
+    "display": "4.6 s"
    }
   ],
   "accessibility": [
@@ -122,9 +143,9 @@
  "request": null,
  "status": "ok",
  "runs": [
-  64,
-  70,
-  94
+  71,
+  71,
+  97
  ],
  "note": ""
 }

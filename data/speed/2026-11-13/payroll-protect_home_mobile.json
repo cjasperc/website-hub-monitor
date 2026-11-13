@@ -1,14 +1,14 @@
 {
- "checkedAt": "2026-11-13T14:23:41.227Z",
+ "checkedAt": "2026-11-13T14:42:21.303Z",
  "lighthouse": "13.6.0",
  "finalUrl": "https://payrollprotect.co.uk/",
- "speed": 89,
+ "speed": 91,
  "accessibility": 97,
  "best_practices": 100,
  "seo": 100,
- "fcp_s": 1.83,
- "lcp_s": 3.38,
- "si_s": 3.49,
+ "fcp_s": 1.74,
+ "lcp_s": 3.29,
+ "si_s": 3.29,
  "tbt_ms": 0,
  "cls": 0,
  "payload_kib": 398,
@@ -29,7 +29,7 @@
   {
    "id": "render-blocking-insight",
    "title": "Render-blocking requests",
-   "saving": "130 ms"
+   "saving": "150 ms"
   },
   {
    "id": "unminified-javascript",
@@ -39,6 +39,32 @@
  ],
  "seo_issues": "",
  "lcp_element": "<p class=\"hx-sub is-revealed\" data-reveal=\"\" style=\"--rv-delay: 450ms; --rv-dur: 450ms\">",
+ "heaviest": [
+  {
+   "file": "mona-sans-latin.woff2",
+   "kib": 96
+  },
+  {
+   "file": "unbounded-latin.woff2",
+   "kib": 50
+  },
+  {
+   "file": "hero-still-600.webp",
+   "kib": 43
+  },
+  {
+   "file": "sections.css",
+   "kib": 41
+  },
+  {
+   "file": "gsap.min.js",
+   "kib": 27
+  },
+  {
+   "file": "payrollprotect.co.uk",
+   "kib": 23
+  }
+ ],
  "failing": {
   "performance": [
    {
@@ -59,7 +85,7 @@
    {
     "id": "render-blocking-insight",
     "title": "Render-blocking requests",
-    "display": "Est savings of 130 ms"
+    "display": "Est savings of 150 ms"
    },
    {
     "id": "unminified-css",
@@ -79,7 +105,7 @@
    {
     "id": "mainthread-work-breakdown",
     "title": "Minimize main-thread work",
-    "display": "3.4 s"
+    "display": "3.7 s"
    }
   ],
   "accessibility": [
@@ -101,9 +127,9 @@
  "request": null,
  "status": "ok",
  "runs": [
-  89,
-  89,
-  89
+  90,
+  91,
+  92
  ],
  "note": ""
 }
