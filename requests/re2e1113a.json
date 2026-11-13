@@ -1,0 +1,14 @@
+{
+ "runId": "re2e1113a",
+ "kind": "check",
+ "siteIds": [
+  "payroll-protect",
+  "foundry",
+  "puure-digital"
+ ],
+ "devices": [
+  "mobile",
+  "desktop"
+ ],
+ "requestedAt": "2026-11-13T14:43:51.103Z"
+}
