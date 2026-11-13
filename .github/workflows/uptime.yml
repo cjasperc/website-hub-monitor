@@ -1,9 +1,10 @@
 name: Uptime
 
-# Every 5 minutes (GitHub may start a scheduled run a few minutes late when it's busy).
+# Every 5 minutes, at 3, 8, 13 and so on past the hour, away from the busy top of the hour.
+# GitHub may still start a scheduled run late, or skip one, when it's busy.
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '3-58/5 * * * *'
   workflow_dispatch:
 
 permissions:
