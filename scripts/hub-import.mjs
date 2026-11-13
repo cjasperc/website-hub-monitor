@@ -245,17 +245,19 @@ for (const siteId of speedSites) {
   }
   if (heavy.length) {
     const worst = heavy.reduce((a, b) => (b.payload_kib > a.payload_kib ? b : a));
-    const files = new Map();
+    // Files that differ only by a number before the extension (frame_0116.webp) count as one group.
+    const groups = new Map();
     for (const f of worst.heaviest || []) {
-      const x = files.get(f.file) || { n: 0, kib: 0 };
-      files.set(f.file, { n: x.n + 1, kib: x.kib + f.kib });
+      const key = String(f.file).replace(/\d+(?=\.[a-z0-9]+$)/i, '*');
+      const g = groups.get(key) || { n: 0, kib: 0, one: f.file };
+      groups.set(key, { n: g.n + (f.count || 1), kib: g.kib + f.kib, one: g.one });
     }
-    const biggest = [...files].sort((a, b) => b[1].kib - a[1].kib).slice(0, 3)
-      .map(([file, x]) => `${file}${x.n > 1 ? ` ${x.n} times` : ''} (${size(x.kib)})`);
+    const biggest = [...groups].sort((a, b) => b[1].kib - a[1].kib).slice(0, 3)
+      .map(([key, g]) => (g.n > 1 ? `${key} (${g.n} files, ${size(g.kib)})` : `${g.one} (${size(g.kib)})`));
     add(siteId, 'pagespeed', 'payload', {
       severity: worst.payload_kib > 20000 ? 'high' : 'medium',
       title: `Page downloads about ${Math.max(1, Math.round(worst.payload_kib / 1024))} MB`,
-      detail: `Lighthouse measured ${heavy.map((r) => `${size(r.payload_kib)} on ${r.device}`).join(' and ')}.${biggest.length ? ` Biggest files: ${biggest.join(', ')}.` : ''} Most pages stay under 2 MB.`,
+      detail: `Lighthouse measured ${heavy.map((r) => `${size(r.payload_kib)}${r.requests ? ` in ${r.requests} requests` : ''} on ${r.device}`).join(' and ')}.${biggest.length ? ` Biggest: ${biggest.join(', ')}.` : ''} Most pages stay under 2 MB.`,
     });
   }
 }

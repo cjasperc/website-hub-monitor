@@ -24,6 +24,20 @@ function fileName(url) {
   }
 }
 
+// Where the bytes go: every request grouped by file name, with names that differ only by a
+// number before the extension (frame_0116.webp, frame_0117.webp) as one group "frame_*.webp".
+function heaviest(requests) {
+  const groups = new Map();
+  for (const it of requests) {
+    const name = fileName(it.url);
+    const key = name.replace(/\d+(?=\.[a-z0-9]+$)/i, '*');
+    const g = groups.get(key) || { name, count: 0, bytes: 0 };
+    groups.set(key, { name: g.name, count: g.count + 1, bytes: g.bytes + (it.transferSize || 0) });
+  }
+  return [...groups].sort((x, y) => y[1].bytes - x[1].bytes).slice(0, 5)
+    .map(([key, g]) => ({ file: g.count > 1 ? key : g.name, count: g.count, kib: Math.round(g.bytes / 1024) }));
+}
+
 // Audits that count against a category, as PageSpeed lists them.
 function failingAudits(lhr, category) {
   return (lhr.categories[category]?.auditRefs || [])
@@ -76,7 +90,7 @@ export function summarize(lhr) {
     opportunities: opportunities.slice(0, 6).map(({ id, title, saving: s }) => ({ id, title, saving: s })),
     seo_issues: failing.seo.map((x) => x.title).join('; '),
     lcp_element: findSnippet(a['lcp-breakdown-insight']?.details).slice(0, 200),
-    heaviest: (a['total-byte-weight']?.details?.items || []).slice(0, 6).map((it) => ({ file: fileName(it.url), kib: Math.round((it.totalBytes || 0) / 1024) })),
+    heaviest: heaviest(a['network-requests']?.details?.items || []),
     failing,
   };
 }
