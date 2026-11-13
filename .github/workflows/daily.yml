@@ -7,7 +7,7 @@ on:
     - cron: '5 5 * * *'
   push:
     branches: [main]
-    paths: ['requests/**']
+    paths: ['requests/*.json']
   workflow_dispatch:
     inputs:
       sites:
