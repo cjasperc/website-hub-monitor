@@ -23,9 +23,28 @@ Set `"active": false` to pause a site without losing its history.
 
 ## Requests from the hub
 
-The hub's Check now button adds a file to `requests/`. That push starts the speed workflow
-for just the sites in the file, and the workflow writes `data/requests/<run id>.json` when
-it's done, which the hub waits for.
+The hub's **Check now** and **Run full review** buttons start a Claude task, which adds a file
+to `requests/` with `scripts/ask.mjs` and pushes it. That push starts the speed workflow for
+just the sites in the file. A review also gets screenshots of the live site on desktop and a
+phone, a link check and the page's title, description and image facts (`scripts/shots.mjs`,
+saved to `data/reviews/<run id>/`). The workflow marks `data/requests/<run id>.json` done or
+failed at the end, and the task waits for that with `scripts/wait.mjs`.
+
+## How results reach the hub
+
+`scripts/hub-import.mjs` reads this repo's data and a snapshot of the hub's database, and works
+out every write the hub needs: new results, one uptime page per site, and which issues to open,
+update or close. The Claude task only copies those writes into the hub, so the numbers and the
+issue rules are the same every time. It runs every day at 06:41 UTC and after each request.
+
+| Script | What it does |
+| --- | --- |
+| `uptime.mjs` | One uptime check of every site, alerts as GitHub issues |
+| `speed.mjs`, `summarize.mjs` | Lighthouse runs and the fields the hub keeps |
+| `health.mjs` | Certificate, headers, redirect, robots.txt, sitemap.xml |
+| `shots.mjs` | Screenshots and page facts, for reviews only |
+| `ask.mjs`, `wait.mjs`, `finish.mjs` | Requests from the hub and their status |
+| `hub-import.mjs` | The writes that bring all of it into the hub |
 
 ## Stopping it
 
