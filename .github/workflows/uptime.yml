@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write   # to start the morning speed check if GitHub's own timer missed it
 
 concurrency:
   group: uptime
@@ -32,3 +33,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - name: Save results
         run: bash scripts/save.sh "Uptime"
+      - name: Start today's speed check if it hasn't run
+        if: always()
+        run: node scripts/daily-kick.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}

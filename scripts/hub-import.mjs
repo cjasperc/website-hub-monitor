@@ -325,6 +325,10 @@ for (const op of ops) {
 }
 if (cur.length) batches.push(cur);
 
+// Sites the hub watches that have no speed results yet for today (UTC), for the run's log.
+const day = nowIso.slice(0, 10);
+const notToday = hubSites.filter((s) => s.active !== false && !all.some((r) => r.siteId === s.id && String(r.checkedAt).slice(0, 10) === day));
+
 const names = (ids) => {
   const list = [...ids].map(nameOf);
   return list.length < 3 ? list.join(' and ') : `${list.slice(0, -1).join(', ')} and ${list[list.length - 1]}`;
@@ -333,13 +337,15 @@ const down = uptimeOps.filter((o) => o.data && o.data.status === 'down').map((o)
 const resultSites = new Set(fresh.map((r) => r.siteId));
 const summary = {
   runId, since: newest || null, newResults: results.length, resultSites: [...resultSites], uptimeSites: uptimeOps.filter((o) => o.op === 'set').length,
+  notToday: notToday.map((s) => s.id),
   issues: tally, down, writes: ops.length, batches: batches.length, sitesChanged,
 };
 const parts = [
   results.length ? `${results.length} new result${results.length === 1 ? '' : 's'} for ${names(resultSites)}.` : 'No new speed results.',
   `Issues: ${tally.opened} new, ${tally.updated + tally.reopened} changed, ${tally.fixed} fixed.`,
   watched.size ? (down.length ? `Down now: ${down.join(', ')}.` : 'Every site is up.') : 'No uptime data yet.',
-];
+  notToday.length ? `No speed check yet today for ${names(notToday.map((s) => s.id))}.` : '',
+].filter(Boolean);
 const out = { summary, summaryText: parts.join(' '), sitesChanged, batches };
 if (args.out) writeJson(args.out, out); else process.stdout.write(JSON.stringify(out, null, 1) + '\n');
 console.error(JSON.stringify(summary));

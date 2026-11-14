@@ -4,7 +4,11 @@ name: Speed and health
 # import asks every morning), daily at 05:05 UTC when GitHub's timer fires, or by hand.
 on:
   schedule:
+    # Three chances each morning, as GitHub's timer often skips; each run only tests sites
+    # without today's results. The uptime workflow also starts one if all three are missed.
     - cron: '5 5 * * *'
+    - cron: '35 5 * * *'
+    - cron: '7 6 * * *'
   push:
     branches: [main]
     paths: ['requests/*.json']
@@ -14,6 +18,10 @@ on:
         description: 'Site ids, comma separated. Leave blank for every site.'
         required: false
         default: ''
+      daily:
+        description: 'true: only test sites without results today'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -50,6 +58,7 @@ jobs:
           CHROME_PATH: /usr/bin/google-chrome
           EVENT: ${{ github.event_name }}
           INPUT_SITES: ${{ inputs.sites }}
+          DAILY: ${{ inputs.daily }}
       - name: Screenshots and page facts, for reviews only
         run: node scripts/shots.mjs
         env:

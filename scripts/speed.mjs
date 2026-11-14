@@ -19,7 +19,16 @@ const runId = req ? req.runId : null;
 const wanted = req && Array.isArray(req.siteIds) && req.siteIds.length ? req.siteIds : manual;
 const devices = (req && Array.isArray(req.devices) && req.devices.length ? req.devices : cfg.devices || ['mobile', 'desktop'])
   .filter((d) => d === 'mobile' || d === 'desktop');
-const sites = cfg.sites.filter((s) => !wanted || wanted.includes(s.id));
+let sites = cfg.sites.filter((s) => !wanted || wanted.includes(s.id));
+// A daily run (GitHub's morning timer, or the uptime workflow's fallback) tests only the sites without
+// today's results, so the backup timers can fire more than once without repeating work.
+if (!req && (process.env.EVENT === 'schedule' || process.env.DAILY === 'true')) {
+  sites = sites.filter((s) => devices.some((d) => !fs.existsSync(`data/speed/${date}/${s.id}_home_${d}.json`)));
+  if (!sites.length) {
+    console.log(`Every site already has results for ${date}; nothing to test.`);
+    process.exit(0);
+  }
+}
 const lighthouse = path.resolve(process.env.LIGHTHOUSE_BIN || 'node_modules/.bin/lighthouse');
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lh-'));
 
