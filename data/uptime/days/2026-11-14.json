@@ -2,32 +2,35 @@
  "date": "2026-11-14",
  "sites": {
   "payroll-protect": {
-   "checks": 3,
-   "up": 3,
+   "checks": 4,
+   "up": 4,
    "ms": [
     674,
     747,
-    507
+    507,
+    765
    ],
    "fails": []
   },
   "foundry": {
-   "checks": 3,
-   "up": 3,
+   "checks": 4,
+   "up": 4,
    "ms": [
     344,
     389,
-    220
+    220,
+    349
    ],
    "fails": []
   },
   "puure-digital": {
-   "checks": 3,
-   "up": 3,
+   "checks": 4,
+   "up": 4,
    "ms": [
     631,
     735,
-    414
+    414,
+    574
    ],
    "fails": []
   }
