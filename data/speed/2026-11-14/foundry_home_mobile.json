@@ -1,0 +1,147 @@
+{
+ "checkedAt": "2026-11-14T07:42:46.223Z",
+ "lighthouse": "13.6.0",
+ "finalUrl": "https://sienna-camel-377697.hostingersite.com/",
+ "speed": 98,
+ "accessibility": 97,
+ "best_practices": 100,
+ "seo": 69,
+ "fcp_s": 1.77,
+ "lcp_s": 2.12,
+ "si_s": 2.1,
+ "tbt_ms": 10,
+ "cls": 0.011,
+ "payload_kib": 9999,
+ "requests": 135,
+ "fix_first": "Render-blocking requests",
+ "fix_saving": "760 ms",
+ "opportunities": [
+  {
+   "id": "render-blocking-insight",
+   "title": "Render-blocking requests",
+   "saving": "760 ms"
+  },
+  {
+   "id": "unused-css-rules",
+   "title": "Reduce unused CSS",
+   "saving": "11 KiB"
+  },
+  {
+   "id": "unminified-javascript",
+   "title": "Minify JavaScript",
+   "saving": "7 KiB"
+  },
+  {
+   "id": "unminified-css",
+   "title": "Minify CSS",
+   "saving": "4 KiB"
+  }
+ ],
+ "seo_issues": "Page is blocked from indexing",
+ "lcp_element": "<image class=\"loader__cast\" href=\"/assets/logo/foundry-mark-512.webp\" x=\"62.99\" y=\"75.77\" width=\"114.02\" height=\"92.45\" preserveAspectRatio=\"none\">",
+ "heaviest": [
+  {
+   "file": "frame_*.webp",
+   "count": 124,
+   "kib": 9743
+  },
+  {
+   "file": "k3kQo8UDI-1M0wlSfdnoLmvDIaI.woff2",
+   "count": 1,
+   "kib": 88
+  },
+  {
+   "file": "hero-still-960.webp",
+   "count": 1,
+   "kib": 36
+  },
+  {
+   "file": "foundry-mark-*.webp",
+   "count": 2,
+   "kib": 36
+  },
+  {
+   "file": "fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDuDJAM2w.woff2",
+   "count": 1,
+   "kib": 35
+  }
+ ],
+ "failing": {
+  "performance": [
+   {
+    "id": "forced-reflow-insight",
+    "title": "Forced reflow",
+    "display": ""
+   },
+   {
+    "id": "lcp-discovery-insight",
+    "title": "LCP request discovery",
+    "display": ""
+   },
+   {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "display": ""
+   },
+   {
+    "id": "render-blocking-insight",
+    "title": "Render-blocking requests",
+    "display": "Est savings of 760 ms"
+   },
+   {
+    "id": "unminified-css",
+    "title": "Minify CSS",
+    "display": "Est savings of 4 KiB"
+   },
+   {
+    "id": "unminified-javascript",
+    "title": "Minify JavaScript",
+    "display": "Est savings of 7 KiB"
+   },
+   {
+    "id": "unused-css-rules",
+    "title": "Reduce unused CSS",
+    "display": "Est savings of 11 KiB"
+   },
+   {
+    "id": "total-byte-weight",
+    "title": "Avoid enormous network payloads",
+    "display": "Total size was 9,999 KiB"
+   },
+   {
+    "id": "mainthread-work-breakdown",
+    "title": "Minimize main-thread work",
+    "display": "3.6 s"
+   }
+  ],
+  "accessibility": [
+   {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "display": ""
+   }
+  ],
+  "best-practices": [],
+  "seo": [
+   {
+    "id": "is-crawlable",
+    "title": "Page is blocked from indexing",
+    "display": ""
+   }
+  ]
+ },
+ "siteId": "foundry",
+ "site": "Foundry",
+ "page": "Home (staging)",
+ "pageKey": "home",
+ "url": "https://sienna-camel-377697.hostingersite.com/",
+ "device": "mobile",
+ "request": null,
+ "status": "ok",
+ "runs": [
+  98,
+  98,
+  98
+ ],
+ "note": ""
+}
