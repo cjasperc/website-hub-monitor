@@ -1,0 +1,66 @@
+{
+ "date": "2026-11-15",
+ "checkedAt": "2026-11-15T00:17:18.734Z",
+ "sites": {
+  "payroll-protect": {
+   "ssl": {
+    "validTo": "2027-02-02T11:30:00.000Z",
+    "daysLeft": 79,
+    "issuer": "Let's Encrypt"
+   },
+   "status": 200,
+   "headers": {
+    "hsts": false,
+    "csp": true,
+    "nosniff": false,
+    "frame": false,
+    "referrer": false
+   },
+   "server": "LiteSpeed",
+   "httpsRedirect": true,
+   "robots": 200,
+   "sitemap": 200,
+   "xRobots": ""
+  },
+  "foundry": {
+   "ssl": {
+    "validTo": "2027-02-04T12:52:22.000Z",
+    "daysLeft": 81,
+    "issuer": "Let's Encrypt"
+   },
+   "status": 200,
+   "headers": {
+    "hsts": false,
+    "csp": true,
+    "nosniff": true,
+    "frame": true,
+    "referrer": true
+   },
+   "server": "hcdn",
+   "httpsRedirect": true,
+   "robots": 200,
+   "sitemap": 200,
+   "xRobots": "noindex, nofollow"
+  },
+  "puure-digital": {
+   "ssl": {
+    "validTo": "2027-01-02T12:48:35.000Z",
+    "daysLeft": 48,
+    "issuer": "Let's Encrypt"
+   },
+   "status": 200,
+   "headers": {
+    "hsts": false,
+    "csp": true,
+    "nosniff": false,
+    "frame": false,
+    "referrer": false
+   },
+   "server": "LiteSpeed",
+   "httpsRedirect": true,
+   "robots": 200,
+   "sitemap": 200,
+   "xRobots": ""
+  }
+ }
+}
