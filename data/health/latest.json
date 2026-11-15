@@ -1,11 +1,11 @@
 {
  "date": "2026-11-15",
- "checkedAt": "2026-11-15T00:17:18.734Z",
+ "checkedAt": "2026-11-15T12:40:28.724Z",
  "sites": {
   "payroll-protect": {
    "ssl": {
     "validTo": "2027-02-02T11:30:00.000Z",
-    "daysLeft": 79,
+    "daysLeft": 78,
     "issuer": "Let's Encrypt"
    },
    "status": 200,
