@@ -7,9 +7,9 @@
    "incidents": [],
    "name": "PayRoll Protect",
    "url": "https://payrollprotect.co.uk/",
-   "lastCheck": "2026-11-16T23:18:52.429Z",
+   "lastCheck": "2026-11-17T05:09:17.381Z",
    "lastStatus": 200,
-   "lastMs": 755,
+   "lastMs": 590,
    "lastError": "",
    "firstFailAt": null
   },
@@ -20,9 +20,9 @@
    "incidents": [],
    "name": "Foundry",
    "url": "https://sienna-camel-377697.hostingersite.com/",
-   "lastCheck": "2026-11-16T23:18:52.429Z",
+   "lastCheck": "2026-11-17T05:09:17.381Z",
    "lastStatus": 200,
-   "lastMs": 791,
+   "lastMs": 235,
    "lastError": "",
    "firstFailAt": null
   },
@@ -33,12 +33,12 @@
    "incidents": [],
    "name": "Puure Digital",
    "url": "https://puuredigital.co.uk/",
-   "lastCheck": "2026-11-16T23:18:52.429Z",
+   "lastCheck": "2026-11-17T05:09:17.381Z",
    "lastStatus": 200,
-   "lastMs": 884,
+   "lastMs": 473,
    "lastError": "",
    "firstFailAt": null
   }
  },
- "updatedAt": "2026-11-16T23:18:52.429Z"
+ "updatedAt": "2026-11-17T05:09:17.381Z"
 }
