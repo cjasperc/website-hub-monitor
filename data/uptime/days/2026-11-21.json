@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-21",
+ "sites": {
+  "payroll-protect": {
+   "checks": 1,
+   "up": 1,
+   "ms": [
+    651
+   ],
+   "fails": []
+  },
+  "foundry": {
+   "checks": 1,
+   "up": 1,
+   "ms": [
+    439
+   ],
+   "fails": []
+  },
+  "puure-digital": {
+   "checks": 1,
+   "up": 1,
+   "ms": [
+    769
+   ],
+   "fails": []
+  }
+ }
+}
