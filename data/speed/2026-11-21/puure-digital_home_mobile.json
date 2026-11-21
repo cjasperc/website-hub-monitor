@@ -1,0 +1,161 @@
+{
+ "checkedAt": "2026-11-21T04:07:19.421Z",
+ "lighthouse": "13.6.0",
+ "finalUrl": "https://puuredigital.co.uk/",
+ "speed": 89,
+ "accessibility": 89,
+ "best_practices": 100,
+ "seo": 100,
+ "fcp_s": 2.52,
+ "lcp_s": 2.52,
+ "si_s": 5.47,
+ "tbt_ms": 0,
+ "cls": 0,
+ "payload_kib": 87985,
+ "requests": 46,
+ "fix_first": "Render-blocking requests",
+ "fix_saving": "820 ms",
+ "opportunities": [
+  {
+   "id": "render-blocking-insight",
+   "title": "Render-blocking requests",
+   "saving": "820 ms"
+  },
+  {
+   "id": "image-delivery-insight",
+   "title": "Improve image delivery",
+   "saving": "1,967 KiB"
+  },
+  {
+   "id": "cache-insight",
+   "title": "Use efficient cache lifetimes",
+   "saving": "427 KiB"
+  },
+  {
+   "id": "unused-css-rules",
+   "title": "Reduce unused CSS",
+   "saving": "13 KiB"
+  },
+  {
+   "id": "unminified-css",
+   "title": "Minify CSS",
+   "saving": "5 KiB"
+  }
+ ],
+ "seo_issues": "",
+ "lcp_element": "<p class=\"hero-sub\">",
+ "heaviest": [
+  {
+   "file": "ad-tuffstuff.mp4",
+   "count": 1,
+   "kib": 21356
+  },
+  {
+   "file": "ad-diamond-winners.mp4",
+   "count": 3,
+   "kib": 17553
+  },
+  {
+   "file": "hero video 1 v2 compressed.mp4",
+   "count": 1,
+   "kib": 13381
+  },
+  {
+   "file": "ad-tom.mp4",
+   "count": 3,
+   "kib": 9196
+  },
+  {
+   "file": "ad-btf.mp4",
+   "count": 3,
+   "kib": 7369
+  }
+ ],
+ "failing": {
+  "performance": [
+   {
+    "id": "cache-insight",
+    "title": "Use efficient cache lifetimes",
+    "display": "Est savings of 427 KiB"
+   },
+   {
+    "id": "image-delivery-insight",
+    "title": "Improve image delivery",
+    "display": "Est savings of 1,967 KiB"
+   },
+   {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "display": ""
+   },
+   {
+    "id": "render-blocking-insight",
+    "title": "Render-blocking requests",
+    "display": "Est savings of 820 ms"
+   },
+   {
+    "id": "unminified-css",
+    "title": "Minify CSS",
+    "display": "Est savings of 5 KiB"
+   },
+   {
+    "id": "unused-css-rules",
+    "title": "Reduce unused CSS",
+    "display": "Est savings of 13 KiB"
+   },
+   {
+    "id": "total-byte-weight",
+    "title": "Avoid enormous network payloads",
+    "display": "Total size was 87,985 KiB"
+   },
+   {
+    "id": "mainthread-work-breakdown",
+    "title": "Minimize main-thread work",
+    "display": "2.4 s"
+   },
+   {
+    "id": "unsized-images",
+    "title": "Image elements do not have explicit `width` and `height`",
+    "display": ""
+   }
+  ],
+  "accessibility": [
+   {
+    "id": "aria-hidden-focus",
+    "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+    "display": ""
+   },
+   {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "display": ""
+   },
+   {
+    "id": "heading-order",
+    "title": "Heading elements are not in a sequentially-descending order",
+    "display": ""
+   },
+   {
+    "id": "landmark-one-main",
+    "title": "Document does not have a main landmark.",
+    "display": ""
+   }
+  ],
+  "best-practices": [],
+  "seo": []
+ },
+ "siteId": "puure-digital",
+ "site": "Puure Digital",
+ "page": "Home",
+ "pageKey": "home",
+ "url": "https://puuredigital.co.uk/",
+ "device": "mobile",
+ "request": null,
+ "status": "ok",
+ "runs": [
+  89,
+  89,
+  90
+ ],
+ "note": ""
+}
