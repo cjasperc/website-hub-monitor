@@ -1,11 +1,11 @@
 {
  "date": "2026-11-23",
- "checkedAt": "2026-11-23T01:30:20.972Z",
+ "checkedAt": "2026-11-23T15:53:12.134Z",
  "sites": {
   "payroll-protect": {
    "ssl": {
     "validTo": "2027-02-02T11:30:00.000Z",
-    "daysLeft": 71,
+    "daysLeft": 70,
     "issuer": "Let's Encrypt"
    },
    "status": 200,
@@ -25,7 +25,7 @@
   "foundry": {
    "ssl": {
     "validTo": "2027-02-04T12:52:22.000Z",
-    "daysLeft": 73,
+    "daysLeft": 72,
     "issuer": "Let's Encrypt"
    },
    "status": 200,
@@ -45,7 +45,7 @@
   "puure-digital": {
    "ssl": {
     "validTo": "2027-01-02T12:48:35.000Z",
-    "daysLeft": 40,
+    "daysLeft": 39,
     "issuer": "Let's Encrypt"
    },
    "status": 200,
