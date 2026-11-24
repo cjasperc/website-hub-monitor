@@ -1,59 +1,65 @@
 {
  "date": "2026-11-24",
- "checkedAt": "2026-11-24T05:36:59.583Z",
+ "checkedAt": "2026-11-24T15:44:48.397Z",
  "sites": {
   "payroll-protect": {
    "ssl": {
-    "error": "Timed out"
+    "validTo": "2027-02-02T11:30:00.000Z",
+    "daysLeft": 69,
+    "issuer": "Let's Encrypt"
    },
-   "status": 0,
+   "status": 200,
    "headers": {
     "hsts": false,
-    "csp": false,
+    "csp": true,
     "nosniff": false,
     "frame": false,
     "referrer": false
    },
-   "server": "",
-   "httpsRedirect": false,
-   "robots": 0,
-   "sitemap": 0,
+   "server": "LiteSpeed",
+   "httpsRedirect": true,
+   "robots": 200,
+   "sitemap": 200,
    "xRobots": ""
   },
   "foundry": {
    "ssl": {
-    "error": "ETIMEDOUT"
+    "validTo": "2027-02-04T12:52:22.000Z",
+    "daysLeft": 71,
+    "issuer": "Let's Encrypt"
    },
-   "status": 0,
+   "status": 200,
    "headers": {
     "hsts": false,
-    "csp": false,
-    "nosniff": false,
-    "frame": false,
-    "referrer": false
+    "csp": true,
+    "nosniff": true,
+    "frame": true,
+    "referrer": true
    },
-   "server": "",
-   "httpsRedirect": false,
-   "robots": 0,
-   "sitemap": 0,
-   "xRobots": ""
+   "server": "hcdn",
+   "httpsRedirect": true,
+   "robots": 200,
+   "sitemap": 200,
+   "xRobots": "noindex, nofollow"
   },
   "puure-digital": {
    "ssl": {
-    "error": "Timed out"
+    "validTo": "2027-01-02T12:48:35.000Z",
+    "daysLeft": 38,
+    "issuer": "Let's Encrypt"
    },
-   "status": 0,
+   "status": 200,
    "headers": {
     "hsts": false,
-    "csp": false,
+    "csp": true,
     "nosniff": false,
     "frame": false,
     "referrer": false
    },
-   "server": "",
-   "httpsRedirect": false,
-   "robots": 0,
-   "sitemap": 0,
+   "server": "LiteSpeed",
+   "httpsRedirect": true,
+   "robots": 200,
+   "sitemap": 200,
    "xRobots": ""
   }
  }
