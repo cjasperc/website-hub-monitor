@@ -1,0 +1,12 @@
+{
+ "siteId": "payroll-protect",
+ "site": "PayRoll Protect",
+ "page": "Home",
+ "pageKey": "home",
+ "url": "https://payrollprotect.co.uk/",
+ "device": "desktop",
+ "request": null,
+ "status": "error",
+ "checkedAt": "2026-11-24T05:51:34.159Z",
+ "note": "Runtime error encountered: The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP)"
+}

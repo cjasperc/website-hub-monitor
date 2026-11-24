@@ -1,0 +1,12 @@
+{
+ "siteId": "puure-digital",
+ "site": "Puure Digital",
+ "page": "Home",
+ "pageKey": "home",
+ "url": "https://puuredigital.co.uk/",
+ "device": "desktop",
+ "request": null,
+ "status": "error",
+ "checkedAt": "2026-11-24T06:19:25.304Z",
+ "note": "Runtime error encountered: The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP)"
+}

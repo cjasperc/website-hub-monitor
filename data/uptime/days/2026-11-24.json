@@ -2,28 +2,46 @@
  "date": "2026-11-24",
  "sites": {
   "payroll-protect": {
-   "checks": 1,
+   "checks": 2,
    "up": 1,
    "ms": [
     751
    ],
-   "fails": []
+   "fails": [
+    {
+     "at": "2026-11-24T06:19:25.403Z",
+     "status": 0,
+     "error": "UND_ERR_CONNECT_TIMEOUT"
+    }
+   ]
   },
   "foundry": {
-   "checks": 1,
+   "checks": 2,
    "up": 1,
    "ms": [
     528
    ],
-   "fails": []
+   "fails": [
+    {
+     "at": "2026-11-24T06:19:25.403Z",
+     "status": 0,
+     "error": "ETIMEDOUT"
+    }
+   ]
   },
   "puure-digital": {
-   "checks": 1,
+   "checks": 2,
    "up": 1,
    "ms": [
     614
    ],
-   "fails": []
+   "fails": [
+    {
+     "at": "2026-11-24T06:19:25.403Z",
+     "status": 0,
+     "error": "UND_ERR_CONNECT_TIMEOUT"
+    }
+   ]
   }
  }
 }

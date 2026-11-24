@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-24",
+ "checkedAt": "2026-11-24T05:36:59.583Z",
+ "sites": {
+  "payroll-protect": {
+   "ssl": {
+    "error": "Timed out"
+   },
+   "status": 0,
+   "headers": {
+    "hsts": false,
+    "csp": false,
+    "nosniff": false,
+    "frame": false,
+    "referrer": false
+   },
+   "server": "",
+   "httpsRedirect": false,
+   "robots": 0,
+   "sitemap": 0,
+   "xRobots": ""
+  },
+  "foundry": {
+   "ssl": {
+    "error": "ETIMEDOUT"
+   },
+   "status": 0,
+   "headers": {
+    "hsts": false,
+    "csp": false,
+    "nosniff": false,
+    "frame": false,
+    "referrer": false
+   },
+   "server": "",
+   "httpsRedirect": false,
+   "robots": 0,
+   "sitemap": 0,
+   "xRobots": ""
+  },
+  "puure-digital": {
+   "ssl": {
+    "error": "Timed out"
+   },
+   "status": 0,
+   "headers": {
+    "hsts": false,
+    "csp": false,
+    "nosniff": false,
+    "frame": false,
+    "referrer": false
+   },
+   "server": "",
+   "httpsRedirect": false,
+   "robots": 0,
+   "sitemap": 0,
+   "xRobots": ""
+  }
+ }
+}

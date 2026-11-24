@@ -1,0 +1,12 @@
+{
+ "siteId": "foundry",
+ "site": "Foundry",
+ "page": "Home (staging)",
+ "pageKey": "home",
+ "url": "https://sienna-camel-377697.hostingersite.com/",
+ "device": "mobile",
+ "request": null,
+ "status": "error",
+ "checkedAt": "2026-11-24T05:58:31.927Z",
+ "note": "Runtime error encountered: The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP)"
+}
