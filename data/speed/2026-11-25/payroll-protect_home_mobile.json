@@ -1,0 +1,136 @@
+{
+ "checkedAt": "2026-11-25T01:01:45.838Z",
+ "lighthouse": "13.6.0",
+ "finalUrl": "https://payrollprotect.co.uk/",
+ "speed": 86,
+ "accessibility": 97,
+ "best_practices": 100,
+ "seo": 100,
+ "fcp_s": 1.91,
+ "lcp_s": 3.61,
+ "si_s": 3.83,
+ "tbt_ms": 116,
+ "cls": 0,
+ "payload_kib": 400,
+ "requests": 48,
+ "fix_first": "Render-blocking requests",
+ "fix_saving": "300 ms",
+ "opportunities": [
+  {
+   "id": "render-blocking-insight",
+   "title": "Render-blocking requests",
+   "saving": "300 ms"
+  },
+  {
+   "id": "unused-css-rules",
+   "title": "Reduce unused CSS",
+   "saving": "22 KiB"
+  },
+  {
+   "id": "unminified-css",
+   "title": "Minify CSS",
+   "saving": "16 KiB"
+  },
+  {
+   "id": "unminified-javascript",
+   "title": "Minify JavaScript",
+   "saving": "2 KiB"
+  }
+ ],
+ "seo_issues": "",
+ "lcp_element": "<p class=\"hx-sub is-revealed\" data-reveal=\"\" style=\"--rv-delay: 450ms; --rv-dur: 450ms\">",
+ "heaviest": [
+  {
+   "file": "mona-sans-latin.woff2",
+   "count": 1,
+   "kib": 96
+  },
+  {
+   "file": "unbounded-latin.woff2",
+   "count": 1,
+   "kib": 50
+  },
+  {
+   "file": "hero-still-600.webp",
+   "count": 1,
+   "kib": 43
+  },
+  {
+   "file": "sections.css",
+   "count": 1,
+   "kib": 42
+  },
+  {
+   "file": "gsap.min.js",
+   "count": 1,
+   "kib": 27
+  }
+ ],
+ "failing": {
+  "performance": [
+   {
+    "id": "forced-reflow-insight",
+    "title": "Forced reflow",
+    "display": ""
+   },
+   {
+    "id": "lcp-breakdown-insight",
+    "title": "LCP breakdown",
+    "display": ""
+   },
+   {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "display": ""
+   },
+   {
+    "id": "render-blocking-insight",
+    "title": "Render-blocking requests",
+    "display": "Est savings of 300 ms"
+   },
+   {
+    "id": "unminified-css",
+    "title": "Minify CSS",
+    "display": "Est savings of 16 KiB"
+   },
+   {
+    "id": "unminified-javascript",
+    "title": "Minify JavaScript",
+    "display": "Est savings of 2 KiB"
+   },
+   {
+    "id": "unused-css-rules",
+    "title": "Reduce unused CSS",
+    "display": "Est savings of 22 KiB"
+   },
+   {
+    "id": "mainthread-work-breakdown",
+    "title": "Minimize main-thread work",
+    "display": "4.0 s"
+   }
+  ],
+  "accessibility": [
+   {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "display": ""
+   }
+  ],
+  "best-practices": [],
+  "seo": []
+ },
+ "siteId": "payroll-protect",
+ "site": "PayRoll Protect",
+ "page": "Home",
+ "pageKey": "home",
+ "url": "https://payrollprotect.co.uk/",
+ "device": "mobile",
+ "request": null,
+ "status": "ok",
+ "runs": [
+  84,
+  86,
+  87
+ ],
+ "note": ""
+}
