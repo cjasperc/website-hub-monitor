@@ -1,14 +1,14 @@
 {
- "date": "2026-11-26",
- "startedAt": "2026-11-26T02:28:23.876Z",
- "finishedAt": "2026-11-26T02:33:39.212Z",
+ "date": "2026-11-27",
+ "startedAt": "2026-11-27T03:12:16.740Z",
+ "finishedAt": "2026-11-27T03:17:44.412Z",
  "request": null,
  "files": [
-  "data/speed/2026-11-26/payroll-protect_home_mobile.json",
-  "data/speed/2026-11-26/payroll-protect_home_desktop.json",
-  "data/speed/2026-11-26/foundry_home_mobile.json",
-  "data/speed/2026-11-26/foundry_home_desktop.json",
-  "data/speed/2026-11-26/puure-digital_home_mobile.json",
-  "data/speed/2026-11-26/puure-digital_home_desktop.json"
+  "data/speed/2026-11-27/payroll-protect_home_mobile.json",
+  "data/speed/2026-11-27/payroll-protect_home_desktop.json",
+  "data/speed/2026-11-27/foundry_home_mobile.json",
+  "data/speed/2026-11-27/foundry_home_desktop.json",
+  "data/speed/2026-11-27/puure-digital_home_mobile.json",
+  "data/speed/2026-11-27/puure-digital_home_desktop.json"
  ]
 }
